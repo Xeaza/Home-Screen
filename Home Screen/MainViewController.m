@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "UIImage+animatedGIF.h"
 
 @interface MainViewController ()
 
@@ -35,6 +36,15 @@
 
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
+
+    /* Example code for animating gif
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"gif"];
+    self.dataImageView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
+    self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+
+    url = [[NSBundle mainBundle] URLForResource:@"variableDuration" withExtension:@"gif"];
+    self.variableDurationImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+     */
 }
 
 - (void)animateCountUpScoreLabel
@@ -70,7 +80,6 @@
                 }];
             }];
         }];
-
     }
 }
 
