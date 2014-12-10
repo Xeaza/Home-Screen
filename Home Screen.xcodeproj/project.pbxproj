@@ -414,6 +414,7 @@
 				342BC9091A38B0BB0080B567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		342BC90A1A38B0BB0080B567 /* Build configuration list for PBXNativeTarget "Home ScreenTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				342BC90C1A38B0BB0080B567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
