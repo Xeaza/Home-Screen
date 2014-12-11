@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *firstPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *secondPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
+@property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 
 @end
 
@@ -37,14 +38,10 @@
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
 
-    /* Example code for animating gif
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"gif"];
-    self.dataImageView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
-    self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+    // Example code for animating gif
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"ee" withExtension:@"gif"];
+    self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 
-    url = [[NSBundle mainBundle] URLForResource:@"variableDuration" withExtension:@"gif"];
-    self.variableDurationImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
-     */
 }
 
 - (void)animateCountUpScoreLabel

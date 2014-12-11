@@ -15,6 +15,7 @@
 		342BC8F81A38B0BB0080B567 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342BC8F61A38B0BB0080B567 /* LaunchScreen.xib */; };
 		342BC9041A38B0BB0080B567 /* Home_ScreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC9031A38B0BB0080B567 /* Home_ScreenTests.m */; };
 		342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */; };
+		34500B7B1A3A17C1006665A9 /* ee.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34500B7A1A3A17C1006665A9 /* ee.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		342BC9031A38B0BB0080B567 /* Home_ScreenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home_ScreenTests.m; sourceTree = "<group>"; };
 		342BC90D1A390ABA0080B567 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		34500B7A1A3A17C1006665A9 /* ee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ee.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				342BC90D1A390ABA0080B567 /* UIImage+animatedGIF.h */,
 				342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */,
 				342BC8F11A38B0BB0080B567 /* Main.storyboard */,
+				34500B7A1A3A17C1006665A9 /* ee.gif */,
 				342BC8F41A38B0BB0080B567 /* Images.xcassets */,
 				342BC8F61A38B0BB0080B567 /* LaunchScreen.xib */,
 				342BC8E71A38B0BB0080B567 /* Supporting Files */,
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34500B7B1A3A17C1006665A9 /* ee.gif in Resources */,
 				342BC8F31A38B0BB0080B567 /* Main.storyboard in Resources */,
 				342BC8F81A38B0BB0080B567 /* LaunchScreen.xib in Resources */,
 				342BC8F51A38B0BB0080B567 /* Images.xcassets in Resources */,
