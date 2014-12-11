@@ -65,6 +65,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="onInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGe-ei-Shk"/>
+                                            <segue destination="7ze-fS-Tli" kind="presentation" id="CXQ-JB-lm1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD3-eU-Vm4">
@@ -362,6 +363,44 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="402" y="436.5"/>
+        </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="fxe-00-0qw">
+            <objects>
+                <viewController id="7ze-fS-Tli" customClass="InstructionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ju9-Zy-pdA"/>
+                        <viewControllerLayoutGuide type="bottom" id="s84-z1-OHa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BO6-pl-TTI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8an-DP-v49">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="49" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8an-DP-v49"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8an-DP-v49"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uws-o0-yZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135.5" y="436"/>
         </scene>
     </scenes>
 </document>
