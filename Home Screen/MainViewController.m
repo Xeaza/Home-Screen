@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSNumber *score;
 @property NSInteger counter;
 
+@property (weak, nonatomic) IBOutlet UIView *scoreContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *firstPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *secondPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
@@ -56,7 +57,7 @@
 
 - (IBAction)onScoreLabelTapped:(UITapGestureRecognizer *)tapGesture
 {
-    CGPoint point = [tapGesture locationInView:self.view];
+    CGPoint point = [tapGesture locationInView:self.scoreContainerView];
 
     if (self.firstPointInfo.alpha == 1.0) {
         [UIView animateWithDuration:0.3 animations:^{
