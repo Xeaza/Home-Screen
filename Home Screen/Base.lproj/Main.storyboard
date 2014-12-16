@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -229,10 +229,10 @@
                                                 <exclude reference="gvc-wp-QQw"/>
                                                 <exclude reference="AbH-6t-y39"/>
                                                 <exclude reference="pSv-Cx-mY5"/>
-                                                <exclude reference="dgL-bz-iJs"/>
-                                                <exclude reference="mdb-tE-ejH"/>
                                                 <exclude reference="SHn-uU-KSG"/>
                                                 <exclude reference="mla-f8-EtO"/>
+                                                <exclude reference="dgL-bz-iJs"/>
+                                                <exclude reference="mdb-tE-ejH"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -246,10 +246,10 @@
                                                 <include reference="gvc-wp-QQw"/>
                                                 <include reference="AbH-6t-y39"/>
                                                 <include reference="pSv-Cx-mY5"/>
-                                                <include reference="dgL-bz-iJs"/>
-                                                <include reference="mdb-tE-ejH"/>
                                                 <include reference="SHn-uU-KSG"/>
                                                 <include reference="mla-f8-EtO"/>
+                                                <include reference="dgL-bz-iJs"/>
+                                                <include reference="mdb-tE-ejH"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -281,16 +281,16 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="MNg-8g-oTq"/>
-                                        <exclude reference="EXU-fd-h1v"/>
-                                        <exclude reference="n0L-8a-7gV"/>
-                                        <exclude reference="B1V-JV-E6E"/>
-                                        <exclude reference="eNg-RD-3NU"/>
                                         <exclude reference="5bc-2c-8m7"/>
                                         <exclude reference="y7R-5a-kJd"/>
                                         <exclude reference="DVh-Pe-6d0"/>
                                         <exclude reference="a6D-a6-jBU"/>
+                                        <exclude reference="B1V-JV-E6E"/>
+                                        <exclude reference="eNg-RD-3NU"/>
                                         <exclude reference="3fQ-Ap-knI"/>
                                         <exclude reference="Kzs-Lh-IHD"/>
+                                        <exclude reference="EXU-fd-h1v"/>
+                                        <exclude reference="n0L-8a-7gV"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -303,16 +303,16 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="MNg-8g-oTq"/>
-                                        <include reference="EXU-fd-h1v"/>
-                                        <include reference="n0L-8a-7gV"/>
-                                        <include reference="B1V-JV-E6E"/>
-                                        <include reference="eNg-RD-3NU"/>
                                         <include reference="5bc-2c-8m7"/>
                                         <include reference="y7R-5a-kJd"/>
                                         <include reference="DVh-Pe-6d0"/>
                                         <include reference="a6D-a6-jBU"/>
+                                        <include reference="B1V-JV-E6E"/>
+                                        <include reference="eNg-RD-3NU"/>
                                         <include reference="3fQ-Ap-knI"/>
                                         <include reference="Kzs-Lh-IHD"/>
+                                        <include reference="EXU-fd-h1v"/>
+                                        <include reference="n0L-8a-7gV"/>
                                     </mask>
                                 </variation>
                                 <connections>
