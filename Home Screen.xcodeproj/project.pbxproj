@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340F5ACB1A40E5AA00795A0B /* TipsAndTricksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F5ACA1A40E5AA00795A0B /* TipsAndTricksViewController.m */; };
 		342BC8EA1A38B0BB0080B567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC8E91A38B0BB0080B567 /* main.m */; };
 		342BC8ED1A38B0BB0080B567 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC8EC1A38B0BB0080B567 /* AppDelegate.m */; };
 		342BC8F01A38B0BB0080B567 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC8EF1A38B0BB0080B567 /* MainViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340F5AC91A40E5AA00795A0B /* TipsAndTricksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsAndTricksViewController.h; sourceTree = "<group>"; };
+		340F5ACA1A40E5AA00795A0B /* TipsAndTricksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsAndTricksViewController.m; sourceTree = "<group>"; };
 		342BC8E41A38B0BA0080B567 /* Home Screen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Screen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		342BC8E81A38B0BB0080B567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		342BC8E91A38B0BB0080B567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				342BC8EC1A38B0BB0080B567 /* AppDelegate.m */,
 				342BC8EE1A38B0BB0080B567 /* MainViewController.h */,
 				342BC8EF1A38B0BB0080B567 /* MainViewController.m */,
+				340F5AC91A40E5AA00795A0B /* TipsAndTricksViewController.h */,
+				340F5ACA1A40E5AA00795A0B /* TipsAndTricksViewController.m */,
 				34500B7C1A3A25C4006665A9 /* InstructionsViewController.h */,
 				34500B7D1A3A25C4006665A9 /* InstructionsViewController.m */,
 				342BC90D1A390ABA0080B567 /* UIImage+animatedGIF.h */,
@@ -238,6 +243,7 @@
 				342BC8ED1A38B0BB0080B567 /* AppDelegate.m in Sources */,
 				34500B7E1A3A25C4006665A9 /* InstructionsViewController.m in Sources */,
 				342BC8EA1A38B0BB0080B567 /* main.m in Sources */,
+				340F5ACB1A40E5AA00795A0B /* TipsAndTricksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

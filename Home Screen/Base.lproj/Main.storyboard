@@ -19,27 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y10-i4-w6d">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="y10-i4-w6d" secondAttribute="height" multiplier="400:297" id="Anr-Bn-yWD">
-                                        <variation key="widthClass=compact" constant="-130.63973063973071"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" secondItem="y10-i4-w6d" secondAttribute="height" multiplier="200:149" id="l8d-f6-fmF"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Anr-Bn-yWD"/>
-                                        <exclude reference="l8d-f6-fmF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="Anr-Bn-yWD"/>
-                                        <exclude reference="l8d-f6-fmF"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-iA-uJG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -323,23 +302,14 @@
                         <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A8f-iA-uJG" secondAttribute="trailing" id="4Lr-ms-lEX"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y10-i4-w6d" secondAttribute="bottom" id="B9M-73-EHV"/>
                             <constraint firstItem="A8f-iA-uJG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HTj-FB-0kM"/>
-                            <constraint firstItem="y10-i4-w6d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NQL-64-Vnu"/>
                             <constraint firstItem="A8f-iA-uJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ORk-4J-Dc1"/>
-                            <constraint firstItem="y10-i4-w6d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="186" id="Rsk-9Y-kwp"/>
-                            <constraint firstAttribute="trailing" secondItem="y10-i4-w6d" secondAttribute="trailing" id="o14-3O-WVN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="y10-i4-w6d"/>
                                 <exclude reference="A8f-iA-uJG"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="B9M-73-EHV"/>
-                                <exclude reference="NQL-64-Vnu"/>
-                                <exclude reference="Rsk-9Y-kwp"/>
-                                <exclude reference="o14-3O-WVN"/>
                                 <exclude reference="4Lr-ms-lEX"/>
                                 <exclude reference="HTj-FB-0kM"/>
                                 <exclude reference="ORk-4J-Dc1"/>
@@ -347,14 +317,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="y10-i4-w6d"/>
                                 <include reference="A8f-iA-uJG"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="B9M-73-EHV"/>
-                                <include reference="NQL-64-Vnu"/>
-                                <include reference="Rsk-9Y-kwp"/>
-                                <include reference="o14-3O-WVN"/>
                                 <include reference="4Lr-ms-lEX"/>
                                 <include reference="HTj-FB-0kM"/>
                                 <include reference="ORk-4J-Dc1"/>
@@ -380,6 +345,75 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="402" y="436"/>
+        </scene>
+        <!--Tips And Tricks View Controller-->
+        <scene sceneID="VSL-Ja-Dmk">
+            <objects>
+                <viewController id="Grh-ng-XzC" customClass="TipsAndTricksViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWf-eo-IZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Yf-Lt-gRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jfP-68-T8N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y10-i4-w6d">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y10-i4-w6d" secondAttribute="height" multiplier="400:297" id="Anr-Bn-yWD">
+                                        <variation key="widthClass=compact" constant="-130.63973063973071"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="y10-i4-w6d" secondAttribute="height" multiplier="200:149" id="l8d-f6-fmF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Anr-Bn-yWD"/>
+                                        <exclude reference="l8d-f6-fmF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Anr-Bn-yWD"/>
+                                        <exclude reference="l8d-f6-fmF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Yf-Lt-gRr" firstAttribute="top" secondItem="y10-i4-w6d" secondAttribute="bottom" id="5FU-Jq-saG"/>
+                            <constraint firstItem="y10-i4-w6d" firstAttribute="top" secondItem="eWf-eo-IZr" secondAttribute="bottom" constant="186" id="DTT-OM-0j3"/>
+                            <constraint firstItem="y10-i4-w6d" firstAttribute="leading" secondItem="jfP-68-T8N" secondAttribute="leading" id="G6o-md-LSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="y10-i4-w6d" secondAttribute="trailing" id="akh-37-96E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="y10-i4-w6d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5FU-Jq-saG"/>
+                                <exclude reference="DTT-OM-0j3"/>
+                                <exclude reference="G6o-md-LSQ"/>
+                                <exclude reference="akh-37-96E"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="y10-i4-w6d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5FU-Jq-saG"/>
+                                <include reference="DTT-OM-0j3"/>
+                                <include reference="G6o-md-LSQ"/>
+                                <include reference="akh-37-96E"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3A-S2-2XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132.5" y="436"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="fxe-00-0qw">
@@ -1569,7 +1603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uws-o0-yZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153.5" y="436"/>
+            <point key="canvasLocation" x="1132.5" y="-246"/>
         </scene>
     </scenes>
     <resources>
