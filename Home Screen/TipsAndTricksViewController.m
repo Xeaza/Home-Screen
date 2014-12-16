@@ -7,8 +7,11 @@
 //
 
 #import "TipsAndTricksViewController.h"
+#import "UIImage+animatedGIF.h"
 
 @interface TipsAndTricksViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 
 @end
 
@@ -16,6 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    // Example code for animating gif
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"ee" withExtension:@"gif"];
+    self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 }
 
 - (void)didReceiveMemoryWarning {

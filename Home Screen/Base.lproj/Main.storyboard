@@ -329,7 +329,6 @@
                     <connections>
                         <outlet property="emojiLabel" destination="sx7-aq-fuK" id="gb9-9Y-Qch"/>
                         <outlet property="firstPointInfo" destination="yhQ-TK-dox" id="QBv-Jo-RNt"/>
-                        <outlet property="gifImageView" destination="y10-i4-w6d" id="vxX-xW-OHb"/>
                         <outlet property="scoreContainerView" destination="yH4-rR-6nx" id="eQA-9m-gYs"/>
                         <outlet property="scoreLabel" destination="YD3-eU-Vm4" id="jZ2-Lp-Lwr"/>
                         <outlet property="secondPointInfo" destination="551-eV-xJa" id="hh4-gO-quM"/>
@@ -410,6 +409,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="y10-i4-w6d" id="Sdl-93-pHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3A-S2-2XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

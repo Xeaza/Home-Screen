@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "UIImage+animatedGIF.h"
 
 @interface MainViewController ()
 
@@ -20,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *firstPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *secondPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
-@property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 
 @end
 
@@ -38,10 +36,6 @@
 
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
-
-    // Example code for animating gif
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"ee" withExtension:@"gif"];
-    self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 
 }
 
