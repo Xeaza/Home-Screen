@@ -10,4 +10,7 @@
 
 @interface ChatBubble : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame message:(NSString *)message;
+- (void)showChatBubbleAfterDelay:(NSInteger)delay forDuration:(NSInteger)duration;
+
 @end

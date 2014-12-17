@@ -8,8 +8,40 @@
 
 #import "ChatBubble.h"
 
+@interface ChatBubble ()
+
+@property (nonatomic, strong) NSString *message;
+@property NSInteger durationToShowChatBubble;
+
+@end
 @implementation ChatBubble
 
+- (instancetype)initWithFrame:(CGRect)frame message:(NSString *)message
+{
+    self = [super initWithFrame:frame];
+
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.message = message;
+        [self createMessageLabel];
+        self.alpha = 0.0;
+    }
+    return self;
+}
+
+- (void)showChatBubbleAfterDelay:(NSInteger)delay forDuration:(NSInteger)duration
+{
+    // Fade in Chat Bubble
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+        self.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3 delay:duration options:UIViewAnimationOptionCurveLinear animations:^{
+            self.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [self removeFromSuperview];
+        }];
+    }];
+}
 - (void)drawRect:(CGRect)rect
 {
     UIColor* white = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
