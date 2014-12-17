@@ -42,6 +42,14 @@
         }];
     }];
 }
+
+- (void)createMessageLabel
+{
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, self.bounds.size.width - 5, self.bounds.size.height - 5)];
+    messageLabel.text = self.message;
+    [self addSubview:messageLabel];
+}
+
 - (void)drawRect:(CGRect)rect
 {
     UIColor* white = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
