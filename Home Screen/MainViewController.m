@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "ChatBubble.h"
 
 @interface MainViewController ()
 
@@ -36,6 +37,12 @@
 
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
+
+
+    ChatBubble *chatBubble = [[ChatBubble alloc] initWithFrame:CGRectMake(0, 20, 250, 60) message:@"Hi there how are you?"];
+    [self.view addSubview:chatBubble];
+    [chatBubble showChatBubbleAfterDelay:5.0 forDuration:2.0];
+
 }
 
 - (void)animateCountUpScoreLabel
