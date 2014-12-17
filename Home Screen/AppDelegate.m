@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+//Red [UIColor colorWithRed:0.765 green:0.153 blue:0.267 alpha:1]
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +27,8 @@
 {
     // White status bar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.765 green:0.153 blue:0.267 alpha:1]];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
