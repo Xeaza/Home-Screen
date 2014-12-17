@@ -49,11 +49,15 @@
                                             <segue destination="7ze-fS-Tli" kind="presentation" modalTransitionStyle="crossDissolve" id="CXQ-JB-lm1"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1pt per word typed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-TK-dox">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn Roxy Points by:  Typing Words" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-TK-dox">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="8Ww-D4-IW8"/>
-                                            <constraint firstAttribute="width" constant="145" id="ndm-NV-qb0"/>
+                                            <constraint firstAttribute="height" constant="21" id="8Ww-D4-IW8">
+                                                <variation key="widthClass=compact" constant="47"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="145" id="ndm-NV-qb0">
+                                                <variation key="widthClass=compact" constant="155"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +75,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2pt per emoji sent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-eV-xJa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-eV-xJa">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="sgA-rT-uAW"/>
@@ -93,7 +97,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5pt per friend invited" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STe-8F-qP7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inviting Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STe-8F-qP7">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="159" id="aTZ-tG-xcC"/>
@@ -244,11 +248,15 @@
                                     <constraint firstAttribute="trailing" secondItem="9rY-dt-U4K" secondAttribute="trailing" constant="19" id="Kzs-Lh-IHD"/>
                                     <constraint firstAttribute="height" constant="304" id="MNg-8g-oTq"/>
                                     <constraint firstItem="STe-8F-qP7" firstAttribute="top" secondItem="551-eV-xJa" secondAttribute="bottom" constant="3" id="a6D-a6-jBU"/>
-                                    <constraint firstAttribute="centerX" secondItem="yhQ-TK-dox" secondAttribute="centerX" id="eNg-RD-3NU"/>
+                                    <constraint firstAttribute="centerX" secondItem="yhQ-TK-dox" secondAttribute="centerX" id="eNg-RD-3NU">
+                                        <variation key="widthClass=compact" constant="-1.5"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerX" secondItem="yH4-rR-6nx" secondAttribute="centerX" id="n0L-8a-7gV">
                                         <variation key="widthClass=compact" constant="10"/>
                                     </constraint>
-                                    <constraint firstItem="551-eV-xJa" firstAttribute="top" secondItem="yhQ-TK-dox" secondAttribute="bottom" constant="4" id="y7R-5a-kJd"/>
+                                    <constraint firstItem="551-eV-xJa" firstAttribute="top" secondItem="yhQ-TK-dox" secondAttribute="bottom" constant="4" id="y7R-5a-kJd">
+                                        <variation key="widthClass=compact" constant="-1"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
