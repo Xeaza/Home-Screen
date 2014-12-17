@@ -36,7 +36,6 @@
 
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
-
 }
 
 - (void)animateCountUpScoreLabel
