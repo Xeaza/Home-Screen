@@ -306,31 +306,49 @@
                                     <outletCollection property="gestureRecognizers" destination="y3s-dP-jSW" appends="YES" id="28z-nj-QnS"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2R-nN-raI" customClass="ChatBubble">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A8f-iA-uJG" secondAttribute="trailing" id="4Lr-ms-lEX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w2R-nN-raI" secondAttribute="bottom" id="CTS-U9-Lld"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w2R-nN-raI" secondAttribute="trailing" constant="-16" id="GQ2-Lo-rXm"/>
+                            <constraint firstItem="w2R-nN-raI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="GcE-7I-AB0"/>
                             <constraint firstItem="A8f-iA-uJG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HTj-FB-0kM"/>
                             <constraint firstItem="A8f-iA-uJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ORk-4J-Dc1"/>
+                            <constraint firstItem="w2R-nN-raI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="yAn-zY-MoV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="A8f-iA-uJG"/>
+                                <exclude reference="w2R-nN-raI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4Lr-ms-lEX"/>
                                 <exclude reference="HTj-FB-0kM"/>
                                 <exclude reference="ORk-4J-Dc1"/>
+                                <exclude reference="GQ2-Lo-rXm"/>
+                                <exclude reference="GcE-7I-AB0"/>
+                                <exclude reference="yAn-zY-MoV"/>
+                                <exclude reference="CTS-U9-Lld"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="A8f-iA-uJG"/>
+                                <include reference="w2R-nN-raI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="4Lr-ms-lEX"/>
                                 <include reference="HTj-FB-0kM"/>
                                 <include reference="ORk-4J-Dc1"/>
+                                <include reference="GQ2-Lo-rXm"/>
+                                <include reference="GcE-7I-AB0"/>
+                                <include reference="yAn-zY-MoV"/>
+                                <include reference="CTS-U9-Lld"/>
                             </mask>
                         </variation>
                     </view>
