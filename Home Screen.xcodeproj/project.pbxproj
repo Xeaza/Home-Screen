@@ -16,6 +16,7 @@
 		342BC8F81A38B0BB0080B567 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342BC8F61A38B0BB0080B567 /* LaunchScreen.xib */; };
 		342BC9041A38B0BB0080B567 /* Home_ScreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC9031A38B0BB0080B567 /* Home_ScreenTests.m */; };
 		342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */; };
+		34474EFC1A42162100ED89AB /* ChatBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 34474EFB1A42162100ED89AB /* ChatBubble.m */; };
 		34500B7B1A3A17C1006665A9 /* ee.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34500B7A1A3A17C1006665A9 /* ee.gif */; };
 		34500B7E1A3A25C4006665A9 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34500B7D1A3A25C4006665A9 /* InstructionsViewController.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		342BC9031A38B0BB0080B567 /* Home_ScreenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home_ScreenTests.m; sourceTree = "<group>"; };
 		342BC90D1A390ABA0080B567 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		34474EFA1A42162100ED89AB /* ChatBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBubble.h; sourceTree = "<group>"; };
+		34474EFB1A42162100ED89AB /* ChatBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBubble.m; sourceTree = "<group>"; };
 		34500B7A1A3A17C1006665A9 /* ee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ee.gif; sourceTree = "<group>"; };
 		34500B7C1A3A25C4006665A9 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		34500B7D1A3A25C4006665A9 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				342BC8EC1A38B0BB0080B567 /* AppDelegate.m */,
 				342BC8EE1A38B0BB0080B567 /* MainViewController.h */,
 				342BC8EF1A38B0BB0080B567 /* MainViewController.m */,
+				34474EFA1A42162100ED89AB /* ChatBubble.h */,
+				34474EFB1A42162100ED89AB /* ChatBubble.m */,
 				340F5AC91A40E5AA00795A0B /* TipsAndTricksViewController.h */,
 				340F5ACA1A40E5AA00795A0B /* TipsAndTricksViewController.m */,
 				34500B7C1A3A25C4006665A9 /* InstructionsViewController.h */,
@@ -242,6 +247,7 @@
 				342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */,
 				342BC8ED1A38B0BB0080B567 /* AppDelegate.m in Sources */,
 				34500B7E1A3A25C4006665A9 /* InstructionsViewController.m in Sources */,
+				34474EFC1A42162100ED89AB /* ChatBubble.m in Sources */,
 				342BC8EA1A38B0BB0080B567 /* main.m in Sources */,
 				340F5ACB1A40E5AA00795A0B /* TipsAndTricksViewController.m in Sources */,
 			);
