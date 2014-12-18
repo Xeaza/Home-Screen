@@ -39,11 +39,9 @@
     [self performSelector:@selector(animateCountUpScoreLabel)];
 
 
-    ChatBubble *chatBubble = [[ChatBubble alloc] initWithFrame:CGRectMake(0, 20, 250, 60) message:@"Hi there how are you?"];
-    [self.view addSubview:chatBubble];
-    [chatBubble showChatBubbleAfterDelay:5.0 forDuration:2.0];
-
 }
+
+#pragma mark - Score Label
 
 - (void)animateCountUpScoreLabel
 {
@@ -80,6 +78,19 @@
         }];
     }
 }
+
+#pragma mark - Tips & Tricks
+
+- (void)showTip
+{
+    NSString *randomTip = self.tipsArray[arc4random_uniform((int)self.tipsArray.count)];
+    ChatBubble *chatBubble = [[ChatBubble alloc] initWithMessage:randomTip];
+    [self.view addSubview:chatBubble];
+    [chatBubble showChatBubble];
+}
+
+
+#pragma mark - Info Button
 
 - (IBAction)onInfoButtonTapped:(id)sender
 {
