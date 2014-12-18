@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *secondPointInfo;
 @property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
 
+@property (strong, nonatomic) NSArray *tipsArray;
+
 @end
 
 @implementation MainViewController
@@ -38,6 +40,7 @@
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
 
+    self.tipsArray = @[@"Did you know you can double tap on an emoji to replace the word your just typed?", @"Did you know that typing 'ee' loads all available emoji starting with your most recently used?"];
 
 }
 
