@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSArray *tipsArray;
 @property (strong, nonatomic) NSArray *urlArray;
 @property (strong, nonatomic) NSMutableDictionary *tipsDictionary;
+@property (weak, nonatomic) IBOutlet UILabel *swipeInstructionLabel;
 
 @end
 
