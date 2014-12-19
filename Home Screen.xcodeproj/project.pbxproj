@@ -18,6 +18,7 @@
 		342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */; };
 		34474EFC1A42162100ED89AB /* ChatBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 34474EFB1A42162100ED89AB /* ChatBubble.m */; };
 		344B07411A449F57006C4B9F /* ee.gif in Resources */ = {isa = PBXBuildFile; fileRef = 344B07401A449F57006C4B9F /* ee.gif */; };
+		344B07431A44AD7E006C4B9F /* doubleTap.gif in Resources */ = {isa = PBXBuildFile; fileRef = 344B07421A44AD7E006C4B9F /* doubleTap.gif */; };
 		34500B7E1A3A25C4006665A9 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34500B7D1A3A25C4006665A9 /* InstructionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		34474EFA1A42162100ED89AB /* ChatBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBubble.h; sourceTree = "<group>"; };
 		34474EFB1A42162100ED89AB /* ChatBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBubble.m; sourceTree = "<group>"; };
 		344B07401A449F57006C4B9F /* ee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ee.gif; sourceTree = "<group>"; };
+		344B07421A44AD7E006C4B9F /* doubleTap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = doubleTap.gif; sourceTree = "<group>"; };
 		34500B7C1A3A25C4006665A9 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		34500B7D1A3A25C4006665A9 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				342BC90D1A390ABA0080B567 /* UIImage+animatedGIF.h */,
 				342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */,
 				342BC8F11A38B0BB0080B567 /* Main.storyboard */,
+				344B07421A44AD7E006C4B9F /* doubleTap.gif */,
 				344B07401A449F57006C4B9F /* ee.gif */,
 				342BC8F41A38B0BB0080B567 /* Images.xcassets */,
 				342BC8F61A38B0BB0080B567 /* LaunchScreen.xib */,
@@ -225,6 +228,7 @@
 				344B07411A449F57006C4B9F /* ee.gif in Resources */,
 				342BC8F31A38B0BB0080B567 /* Main.storyboard in Resources */,
 				342BC8F81A38B0BB0080B567 /* LaunchScreen.xib in Resources */,
+				344B07431A44AD7E006C4B9F /* doubleTap.gif in Resources */,
 				342BC8F51A38B0BB0080B567 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

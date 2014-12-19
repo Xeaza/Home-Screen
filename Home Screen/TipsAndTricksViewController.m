@@ -25,8 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"ee" withExtension:@"gif"];
+    NSURL *doubleTapUrl = [[NSBundle mainBundle] URLForResource:@"doubleTap" withExtension:@"gif"];
 
-    self.tipsDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:@[url, @"Type two 'e's to load all available emoji beging with your most recently used."], @"ee", nil];
+
+    self.tipsDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:@[url, @"Type two 'e's to load all available emoji beging with your most recently used."], @"ee", @[doubleTapUrl, @"Double tapping on an emoji replaces the last word you typed"], @"doubleTap", nil];
 
     // Example code for animating gif
     self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:self.tipsDictionary[@"ee"][0]];
