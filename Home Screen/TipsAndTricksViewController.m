@@ -45,6 +45,32 @@
     }];
 }
 
+- (IBAction)onRightSwipe:(UISwipeGestureRecognizer *)rightSwipeGesture
+{
+    [self showNextTip];
+}
+
+- (IBAction)onLeftSwipe:(UISwipeGestureRecognizer *)leftSwipeGesture
+{
+    [self showNextTip];
+}
+
+- (void)showNextTip
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.gifImageView.alpha = 0.0;
+        self.instructionLabel.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        NSString *randomTipKey = self.tipsDictionary.allKeys[arc4random_uniform((int)self.tipsDictionary.allKeys.count)];
+        self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:self.tipsDictionary[randomTipKey][0]];
+        self.instructionLabel.text = self.tipsDictionary[randomTipKey][1];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.gifImageView.alpha = 1.0;
+            self.instructionLabel.alpha = 1.0;
+        }];
+    }];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

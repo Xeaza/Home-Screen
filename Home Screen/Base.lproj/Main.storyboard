@@ -460,6 +460,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OBn-88-8W2" firstAttribute="top" secondItem="HXz-Ca-04h" secondAttribute="bottom" constant="24" id="5gx-HS-hzF"/>
                             <constraint firstItem="SU3-OD-SjX" firstAttribute="top" secondItem="eWf-eo-IZr" secondAttribute="bottom" constant="8" id="6cf-ZM-bE9"/>
@@ -522,6 +523,10 @@
                                 <include reference="M53-P7-eoC"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="555-Q7-GiF" appends="YES" id="dwZ-u7-H0y"/>
+                            <outletCollection property="gestureRecognizers" destination="2qW-ZJ-Cr1" appends="YES" id="tPe-2k-Mde"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tipsTricksIcon" id="Ii2-Jr-aUo"/>
                     <connections>
@@ -531,6 +536,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3A-S2-2XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="555-Q7-GiF" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="onRightSwipe:" destination="Grh-ng-XzC" id="WaF-WP-Djk"/>
+                        <outlet property="delegate" destination="Grh-ng-XzC" id="Xa9-I4-2js"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="2qW-ZJ-Cr1" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="onLeftSwipe:" destination="Grh-ng-XzC" id="Vys-Wd-A4h"/>
+                        <outlet property="delegate" destination="Grh-ng-XzC" id="ddB-zI-JYu"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="135" y="1085"/>
         </scene>
