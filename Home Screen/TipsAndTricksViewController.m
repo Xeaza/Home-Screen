@@ -36,7 +36,7 @@
     self.instructionLabel.text = self.tipsDictionary[@"ee"][1];
 
     self.swipeInstructionLabel.alpha = 0.0;
-    [UIView animateWithDuration:0.3 delay:3.0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [UIView animateWithDuration:0.3 delay:2.0 options:UIViewAnimationOptionTransitionNone animations:^{
         self.swipeInstructionLabel.alpha = 1.0;
     } completion:^(BOOL finished) {
         // TODO: Save that user has seen this already in user defaults
