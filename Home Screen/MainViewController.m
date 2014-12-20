@@ -98,7 +98,6 @@
 
 - (IBAction)onInfoButtonTapped:(id)sender
 {
-    NSLog(@"Info Button Tapped");
 }
 
 - (void)didReceiveMemoryWarning {
