@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaginatedViewController : UIViewController
+@interface PaginatedViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @end
