@@ -10,4 +10,6 @@
 
 @interface TipsAndTricksViewController : UIViewController
 
+@property NSInteger index;
+
 @end
