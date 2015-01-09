@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "ChatBubble.h"
+#import "TipsAndTricksViewController.h"
 
 @interface MainViewController ()
 
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
 
 @property (strong, nonatomic) NSArray *tipsArray;
+@property NSInteger pages;
 
 @end
 
