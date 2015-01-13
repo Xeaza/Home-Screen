@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "ChatBubble.h"
+//#import "ChatBubble.h"
 #import "TipsAndTricksViewController.h"
 
 @interface MainViewController ()
@@ -44,7 +44,7 @@
 
     self.tipsArray = @[@"Did you know you can double tap on an emoji to replace the word your just typed?", @"Did you know that typing 'ee' loads all available emoji starting with your most recently used?"];
 
-    [NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
+    //[NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
 
     [self drawCircle];
 }
@@ -89,13 +89,13 @@
 
 #pragma mark - Tips & Tricks
 
-- (void)showTip
-{
-    NSString *randomTip = self.tipsArray[arc4random_uniform((int)self.tipsArray.count)];
-    ChatBubble *chatBubble = [[ChatBubble alloc] initWithMessage:randomTip];
-    [self.view addSubview:chatBubble];
-    [chatBubble showChatBubble];
-}
+//- (void)showTip
+//{
+//    NSString *randomTip = self.tipsArray[arc4random_uniform((int)self.tipsArray.count)];
+//    ChatBubble *chatBubble = [[ChatBubble alloc] initWithMessage:randomTip];
+//    [self.view addSubview:chatBubble];
+//    [chatBubble showChatBubble];
+//}
 
 #pragma mark - Animation 
 - (void)drawCircle
