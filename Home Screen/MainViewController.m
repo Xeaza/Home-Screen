@@ -53,11 +53,11 @@
 
 - (void)animateCountUpScoreLabel
 {
-    NSInteger upCountNum = arc4random_uniform(7);
-    self.counter += upCountNum;
+    //NSInteger upCountNum = arc4random_uniform(7);
+    self.counter += 10;
     self.scoreLabel.text = @(self.counter).description;
     if (self.counter < self.score.integerValue) {
-        [self performSelector:@selector(animateCountUpScoreLabel) withObject:nil afterDelay:.1];
+        [self performSelector:@selector(animateCountUpScoreLabel) withObject:nil afterDelay:0];
     }
 }
 
