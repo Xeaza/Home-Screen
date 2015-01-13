@@ -104,7 +104,7 @@
     // ***************** Drawing circle ***************************
     // ************************************************************
     NSLog(@"%f", self.view.center.x);
-    CGRect circleRect = CGRectMake(self.view.center.x / 4.5, 30.0, self.view.frame.size.width * .55, self.view.frame.size.width * .55);
+    CGRect circleRect = CGRectMake(self.view.center.x / 4.5, 20.0, self.view.frame.size.width * .55, self.view.frame.size.width * .55);
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:circleRect cornerRadius:CGRectGetWidth(circleRect) / 2.0];
 
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
