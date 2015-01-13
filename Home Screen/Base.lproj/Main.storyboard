@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w0B-dy-Dlj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QTH-3u-qqt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -7,24 +7,85 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
-        <scene sceneID="Ltj-SE-1LG">
+        <!--Paginated View Controller-->
+        <scene sceneID="cNn-nM-ySb">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="AfI-hf-BGm" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qJx-gb-MeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="QTH-3u-qqt" customClass="PaginatedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="msu-ck-Z8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTH-zh-KaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bej-Pb-xbU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugw-Up-b3Y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="BoK-DO-Wfo"/>
+                                    <constraint firstAttribute="height" constant="22" id="gg9-e2-v8G"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BoK-DO-Wfo"/>
+                                        <exclude reference="gg9-e2-v8G"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BoK-DO-Wfo"/>
+                                        <include reference="gg9-e2-v8G"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2T-aU-gJP"/>
+                                    <segue destination="7ze-fS-Tli" kind="presentation" modalTransitionStyle="coverVertical" id="HTU-ip-sCW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ugw-Up-b3Y" firstAttribute="trailing" secondItem="bej-Pb-xbU" secondAttribute="trailingMargin" id="7GF-9o-RCM"/>
+                            <constraint firstItem="Ugw-Up-b3Y" firstAttribute="top" secondItem="msu-ck-Z8U" secondAttribute="bottom" constant="8" id="Y0E-HT-NaV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ugw-Up-b3Y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7GF-9o-RCM"/>
+                                <exclude reference="Y0E-HT-NaV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ugw-Up-b3Y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7GF-9o-RCM"/>
+                                <include reference="Y0E-HT-NaV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEg-yh-nta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582" y="-97"/>
+            <point key="canvasLocation" x="-568.5" y="750"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn Roxy Points by:  Typing Words" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-TK-dox">
@@ -166,33 +227,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rY-dt-U4K">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="7sn-Cx-wHw"/>
-                                    <constraint firstAttribute="width" constant="22" id="OFt-02-8OX"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="7sn-Cx-wHw"/>
-                                        <exclude reference="OFt-02-8OX"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="7sn-Cx-wHw"/>
-                                        <include reference="OFt-02-8OX"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="onInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGe-ei-Shk"/>
-                                    <segue destination="7ze-fS-Tli" kind="presentation" modalTransitionStyle="coverVertical" id="CXQ-JB-lm1"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-eV-xJa">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -247,16 +281,13 @@
                             <constraint firstItem="STe-8F-qP7" firstAttribute="top" secondItem="551-eV-xJa" secondAttribute="bottom" constant="3" id="Yrd-3g-ouu"/>
                             <constraint firstItem="yH4-rR-6nx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="jP6-6M-u3X"/>
                             <constraint firstAttribute="centerX" secondItem="551-eV-xJa" secondAttribute="centerX" id="lUl-Wk-DNt"/>
-                            <constraint firstItem="9rY-dt-U4K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="oEF-AC-XL3"/>
                             <constraint firstAttribute="centerX" secondItem="yH4-rR-6nx" secondAttribute="centerX" id="rGI-7n-fzO"/>
-                            <constraint firstItem="9rY-dt-U4K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tEZ-iO-9ve"/>
                             <constraint firstAttribute="centerX" secondItem="STe-8F-qP7" secondAttribute="centerX" id="xC4-PK-AtP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="yhQ-TK-dox"/>
                                 <exclude reference="yH4-rR-6nx"/>
-                                <exclude reference="9rY-dt-U4K"/>
                                 <exclude reference="551-eV-xJa"/>
                                 <exclude reference="STe-8F-qP7"/>
                             </mask>
@@ -267,8 +298,6 @@
                                 <exclude reference="xC4-PK-AtP"/>
                                 <exclude reference="J0Q-kK-um1"/>
                                 <exclude reference="QwL-w3-bry"/>
-                                <exclude reference="oEF-AC-XL3"/>
-                                <exclude reference="tEZ-iO-9ve"/>
                                 <exclude reference="jP6-6M-u3X"/>
                                 <exclude reference="rGI-7n-fzO"/>
                             </mask>
@@ -277,7 +306,6 @@
                             <mask key="subviews">
                                 <include reference="yhQ-TK-dox"/>
                                 <include reference="yH4-rR-6nx"/>
-                                <include reference="9rY-dt-U4K"/>
                                 <include reference="551-eV-xJa"/>
                                 <include reference="STe-8F-qP7"/>
                             </mask>
@@ -288,8 +316,6 @@
                                 <include reference="xC4-PK-AtP"/>
                                 <include reference="J0Q-kK-um1"/>
                                 <include reference="QwL-w3-bry"/>
-                                <include reference="oEF-AC-XL3"/>
-                                <include reference="tEZ-iO-9ve"/>
                                 <include reference="jP6-6M-u3X"/>
                                 <include reference="rGI-7n-fzO"/>
                             </mask>
@@ -318,66 +344,18 @@
             </objects>
             <point key="canvasLocation" x="135" y="428"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="dr6-i3-3hN">
-            <objects>
-                <tabBarController id="w0B-dy-Dlj" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="ZRy-Qb-pO8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tqQ-jB-EKF"/>
-                        <segue destination="Grh-ng-XzC" kind="relationship" relationship="viewControllers" id="Onk-cI-STu"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DDo-U5-IWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-582" y="704"/>
-        </scene>
         <!--Tips And Tricks View Controller-->
         <scene sceneID="VSL-Ja-Dmk">
             <objects>
-                <viewController id="Grh-ng-XzC" customClass="TipsAndTricksViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipsAndTricksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Grh-ng-XzC" customClass="TipsAndTricksViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eWf-eo-IZr"/>
                         <viewControllerLayoutGuide type="bottom" id="3Yf-Lt-gRr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jfP-68-T8N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU3-OD-SjX">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="aPK-A3-fyc"/>
-                                    <constraint firstAttribute="width" constant="22" id="jhY-EF-KyC"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="aPK-A3-fyc"/>
-                                        <exclude reference="jhY-EF-KyC"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="aPK-A3-fyc"/>
-                                        <include reference="jhY-EF-KyC"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="onInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kld-Mu-q49"/>
-                                    <segue destination="7ze-fS-Tli" kind="presentation" modalTransitionStyle="coverVertical" id="ont-50-idJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips &amp; Tricks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-Ca-04h">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <gestureRecognizers/>
@@ -471,8 +449,6 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OBn-88-8W2" firstAttribute="top" secondItem="HXz-Ca-04h" secondAttribute="bottom" constant="24" id="5gx-HS-hzF"/>
-                            <constraint firstItem="SU3-OD-SjX" firstAttribute="top" secondItem="eWf-eo-IZr" secondAttribute="bottom" constant="8" id="6cf-ZM-bE9"/>
-                            <constraint firstItem="SU3-OD-SjX" firstAttribute="trailing" secondItem="jfP-68-T8N" secondAttribute="trailingMargin" id="7aK-RU-khY"/>
                             <constraint firstAttribute="centerX" secondItem="adv-wh-kmB" secondAttribute="centerX" id="BWS-CL-OgW"/>
                             <constraint firstItem="y10-i4-w6d" firstAttribute="top" secondItem="OBn-88-8W2" secondAttribute="bottom" constant="34.5" id="Elh-en-Y54"/>
                             <constraint firstAttribute="centerX" secondItem="OBn-88-8W2" secondAttribute="centerX" id="F7C-93-9bg"/>
@@ -487,7 +463,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="SU3-OD-SjX"/>
                                 <exclude reference="HXz-Ca-04h"/>
                                 <exclude reference="OBn-88-8W2"/>
                                 <exclude reference="y10-i4-w6d"/>
@@ -500,8 +475,6 @@
                                 <exclude reference="5gx-HS-hzF"/>
                                 <exclude reference="F7C-93-9bg"/>
                                 <exclude reference="BWS-CL-OgW"/>
-                                <exclude reference="6cf-ZM-bE9"/>
-                                <exclude reference="7aK-RU-khY"/>
                                 <exclude reference="Elh-en-Y54"/>
                                 <exclude reference="KiF-er-XKr"/>
                                 <exclude reference="UUG-XV-OJS"/>
@@ -510,7 +483,6 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="SU3-OD-SjX"/>
                                 <include reference="HXz-Ca-04h"/>
                                 <include reference="OBn-88-8W2"/>
                                 <include reference="y10-i4-w6d"/>
@@ -523,8 +495,6 @@
                                 <include reference="5gx-HS-hzF"/>
                                 <include reference="F7C-93-9bg"/>
                                 <include reference="BWS-CL-OgW"/>
-                                <include reference="6cf-ZM-bE9"/>
-                                <include reference="7aK-RU-khY"/>
                                 <include reference="Elh-en-Y54"/>
                                 <include reference="KiF-er-XKr"/>
                                 <include reference="UUG-XV-OJS"/>
@@ -945,7 +915,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uws-o0-yZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865.5" y="738"/>
+            <point key="canvasLocation" x="-568.5" y="83"/>
         </scene>
     </scenes>
     <resources>
@@ -954,7 +924,4 @@
         <image name="scoreIcon" width="33" height="33"/>
         <image name="tipsTricksIcon" width="33" height="33"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ont-50-idJ"/>
-    </inferredMetricsTieBreakers>
 </document>
