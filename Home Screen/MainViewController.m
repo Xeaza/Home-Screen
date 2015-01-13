@@ -37,7 +37,7 @@
     self.secondPointInfo.alpha = 0.0;
     self.thirdPointInfo.alpha = 0.0;
 
-    self.score = [NSNumber numberWithInt:21];
+    self.score = [NSNumber numberWithInt:211];
 
     self.counter = 0;
     [self performSelector:@selector(animateCountUpScoreLabel)];
