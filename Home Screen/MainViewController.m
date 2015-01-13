@@ -45,6 +45,8 @@
     self.tipsArray = @[@"Did you know you can double tap on an emoji to replace the word your just typed?", @"Did you know that typing 'ee' loads all available emoji starting with your most recently used?"];
 
     [NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
+
+    [self drawCircle];
 }
 
 #pragma mark - Score Label
@@ -95,6 +97,32 @@
     [chatBubble showChatBubble];
 }
 
+#pragma mark - Animation 
+- (void)drawCircle
+{
+    // ************************************************************
+    // ***************** Drawing circle ***************************
+    // ************************************************************
+    NSLog(@"%f", self.view.center.x);
+    CGRect circleRect = CGRectMake(self.view.center.x / 4.5, 30.0, self.view.frame.size.width * .55, self.view.frame.size.width * .55);
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:circleRect cornerRadius:CGRectGetWidth(circleRect) / 2.0];
+
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    circleLayer.path = circlePath.CGPath;
+    circleLayer.frame = CGPathGetBoundingBox(circleLayer.path);
+    circleLayer.fillColor = [UIColor clearColor].CGColor;
+    circleLayer.strokeColor = [UIColor whiteColor].CGColor;
+    circleLayer.lineWidth = 3.0;
+
+    CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    rotateAnimation.duration = 1.0;
+    rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    rotateAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    rotateAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotateAnimation.removedOnCompletion = YES;
+    [self.view.layer addSublayer:circleLayer];
+    [circleLayer addAnimation:rotateAnimation forKey:@"animateRotation"];
+}
 
 #pragma mark - Info Button
 
