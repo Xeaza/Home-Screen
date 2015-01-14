@@ -25,6 +25,8 @@
 @property (strong, nonatomic) NSArray *tipsArray;
 @property NSInteger pages;
 
+@property (strong, nonatomic) CABasicAnimation *rotateAnimation;
+
 @end
 
 @implementation MainViewController
@@ -47,6 +49,7 @@
     //[NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
 
     [self drawCircle];
+    [self performSelector:@selector(drawALine) withObject:nil afterDelay:1.0];
 }
 
 #pragma mark - Score Label
@@ -114,14 +117,46 @@
     circleLayer.strokeColor = [UIColor whiteColor].CGColor;
     circleLayer.lineWidth = 3.0;
 
-    CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    rotateAnimation.duration = 1.0;
-    rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-    rotateAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    rotateAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    rotateAnimation.removedOnCompletion = YES;
+    self.rotateAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    self.rotateAnimation.duration = 1.0;
+    self.rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    self.rotateAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    self.rotateAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    self.rotateAnimation.removedOnCompletion = YES;
     [self.view.layer addSublayer:circleLayer];
-    [circleLayer addAnimation:rotateAnimation forKey:@"animateRotation"];
+    [circleLayer addAnimation:self.rotateAnimation forKey:@"animateRotation"];
+
+}
+
+- (void)drawALine
+{
+    CGFloat xPosition = self.view.center.x;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(xPosition, self.view.frame.size.width * .55 + 40)];
+    [path addLineToPoint:CGPointMake(xPosition, self.view.frame.size.height - 200)];
+
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
+    shapeLayer.lineWidth = 3.0;
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+
+    CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    drawAnimation.duration = 1.0;
+    drawAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    drawAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    drawAnimation.removedOnCompletion = YES;
+
+    [self.view.layer addSublayer:shapeLayer];
+    [shapeLayer addAnimation:drawAnimation forKey:@"animateStroke"];
+}
+
+#pragma mark - CAAnimation Delegate
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    NSLog(@"Done");
 }
 
 #pragma mark - Info Button
