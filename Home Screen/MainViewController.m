@@ -56,6 +56,7 @@
 
     [self drawCircle];
     [self performSelector:@selector(drawALine) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
 }
 
 #pragma mark - Score Label
