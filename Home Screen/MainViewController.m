@@ -41,6 +41,9 @@
     self.firstPointInfo.alpha = 0.0;
     self.secondPointInfo.alpha = 0.0;
     self.thirdPointInfo.alpha = 0.0;
+    self.typingWordsLabel.alpha = 0.0;
+    self.sendingEmojiLabel.alpha = 0.0;
+    self.inviteFriendsButton.alpha = 0.0;
 
     self.score = [NSNumber numberWithInt:211];
 
