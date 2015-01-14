@@ -141,6 +141,7 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(xPosition, self.view.frame.size.width * .55 + 40)];
     [path addLineToPoint:CGPointMake(xPosition, self.view.frame.size.height - 200)];
+    [path addLineToPoint:CGPointMake(xPosition, self.view.frame.size.height)];
 
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = path.CGPath;
