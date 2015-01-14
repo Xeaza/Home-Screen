@@ -26,6 +26,9 @@
 @property NSInteger pages;
 
 @property (strong, nonatomic) CABasicAnimation *rotateAnimation;
+@property (weak, nonatomic) IBOutlet UILabel *typingWordsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sendingEmojiLabel;
+@property (weak, nonatomic) IBOutlet UIButton *inviteFriendsButton;
 
 @end
 
@@ -157,6 +160,11 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     NSLog(@"Done");
+}
+
+- (IBAction)onInviteFriendsButtonPressed:(id)sender
+{
+
 }
 
 #pragma mark - Info Button
