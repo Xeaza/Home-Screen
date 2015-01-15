@@ -53,15 +53,15 @@
 
     self.tipsArray = @[@"Did you know you can double tap on an emoji to replace the word your just typed?", @"Did you know that typing 'ee' loads all available emoji starting with your most recently used?"];
 
+    self.typingWordsLabel.text = @"The more you type with Roxy the more points you earn.";
+
     //[NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
 
-    //[self drawCircle];
-    //[self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
     ScoreBackgroundView *scoreBackgroundView = [[ScoreBackgroundView alloc] initWithFrame:self.view.frame];
     scoreBackgroundView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:scoreBackgroundView];
 
-    [self performSelector:@selector(animateEarnPointsLabelsAndButtonIntoPlaceOnEntry) withObject:nil afterDelay:1.8];
+    [self performSelector:@selector(fadeInlabels) withObject:nil afterDelay:1.0];
 }
 
 #pragma mark - Score Label
@@ -112,55 +112,6 @@
 //    [chatBubble showChatBubble];
 //}
 
-#pragma mark - Animation 
-- (void)drawCircle
-{
-    // ************************************************************
-    // ***************** Drawing circle ***************************
-    // ************************************************************
-    CGRect circleRect = CGRectMake(self.view.center.x / 4.5, 20.0, self.view.frame.size.width * .55, self.view.frame.size.width * .55);
-    UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:circleRect cornerRadius:CGRectGetWidth(circleRect) / 2.0];
-
-    CAShapeLayer *circleLayer = [CAShapeLayer layer];
-    circleLayer.path = circlePath.CGPath;
-    circleLayer.frame = CGPathGetBoundingBox(circleLayer.path);
-    circleLayer.fillColor = [UIColor clearColor].CGColor;
-    circleLayer.strokeColor = [UIColor whiteColor].CGColor;
-    circleLayer.lineWidth = 3.0;
-
-    self.rotateAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    self.rotateAnimation.duration = 1.0;
-    self.rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-    self.rotateAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    self.rotateAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    self.rotateAnimation.removedOnCompletion = YES;
-    [self.view.layer addSublayer:circleLayer];
-    [circleLayer addAnimation:self.rotateAnimation forKey:@"animateRotation"];
-}
-
-- (void)drawALine
-{
-    CGFloat xPosition = self.view.center.x;
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(xPosition, self.view.frame.size.width * .55 + 40)];
-    [path addLineToPoint:CGPointMake(xPosition, self.view.frame.size.height)];
-
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.path = path.CGPath;
-    shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-    shapeLayer.lineWidth = 3.0;
-    shapeLayer.fillColor = [UIColor clearColor].CGColor;
-
-    CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    drawAnimation.duration = 1.0;
-    drawAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-    drawAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    drawAnimation.removedOnCompletion = YES;
-
-    [self.view.layer addSublayer:shapeLayer];
-    [shapeLayer addAnimation:drawAnimation forKey:@"animateStroke"];
-}
 
 #pragma mark - CAAnimation Delegate
 
@@ -171,41 +122,16 @@
 
 #pragma mark - Earn Points Info
 
-- (void)animateEarnPointsLabelsAndButtonIntoPlaceOnEntry
+- (void)fadeInlabels
 {
-    // Get ending frames of labels and buttons
-    CGRect typingWordsLabelEndingFrame = self.typingWordsLabel.frame;
-    CGRect sendingEmojiLabelEndingFrame = self.sendingEmojiLabel.frame;
-    CGRect inviteFriendsButtonEndingFrame = self.inviteFriendsButton.frame;
-
-    // Set starting frame for typingWordsLabel
-    CGRect typingWordsLabelStartingFrame = CGRectMake(self.typingWordsLabel.frame.origin.x, self.typingWordsLabel.frame.origin.y * 2, self.typingWordsLabel.frame.size.width, self.typingWordsLabel.frame.size.height);
-    self.typingWordsLabel.frame = typingWordsLabelStartingFrame;
-
-    // Set starting frame for sendingEmojiLabel
-    CGRect sendingEmojiLabelStartingFrame = CGRectMake(self.sendingEmojiLabel.frame.origin.x, self.sendingEmojiLabel.frame.origin.y * 2, self.sendingEmojiLabel.frame.size.width, self.sendingEmojiLabel.frame.size.height);
-    self.sendingEmojiLabel.frame = sendingEmojiLabelStartingFrame;
-
-    // Set starting frame for invitingFriendsButton
-    CGRect inviteFriendsButtonStartingFrame = CGRectMake(self.inviteFriendsButton.frame.origin.x, self.inviteFriendsButton.frame.origin.y * 2, self.inviteFriendsButton.frame.size.width, self.inviteFriendsButton.frame.size.height);
-    self.inviteFriendsButton.frame = inviteFriendsButtonStartingFrame;
-
-    // Reveal labels and buttons
-    self.typingWordsLabel.alpha = 1.0;
-    self.sendingEmojiLabel.alpha = 1.0;
-    self.inviteFriendsButton.alpha = 1.0;
-
-    [UIView animateWithDuration:0.5 animations:^{
-        self.typingWordsLabel.frame = typingWordsLabelEndingFrame;
-
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.sendingEmojiLabel.frame = sendingEmojiLabelEndingFrame;
+    [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.typingWordsLabel.alpha = 1.0;
+        [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.sendingEmojiLabel.alpha = 1.0;
+            [UIView animateWithDuration:0.3 delay:0.9 options:UIViewAnimationOptionCurveLinear animations:^{
+                self.inviteFriendsButton.alpha = 1.0;
+            } completion:nil];
         } completion:nil];
-
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.inviteFriendsButton.frame = inviteFriendsButtonEndingFrame;
-        } completion:nil];
-
     } completion:nil];
 }
 
