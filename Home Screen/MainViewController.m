@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 //#import "ChatBubble.h"
 #import "TipsAndTricksViewController.h"
+#import "ScoreBackgroundView.h"
 
 @interface MainViewController ()
 
@@ -54,8 +55,12 @@
 
     //[NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
 
-    [self drawCircle];
-    [self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
+    //[self drawCircle];
+    //[self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
+    ScoreBackgroundView *scoreBackgroundView = [[ScoreBackgroundView alloc] initWithFrame:self.view.frame];
+    scoreBackgroundView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:scoreBackgroundView];
+
     [self performSelector:@selector(animateEarnPointsLabelsAndButtonIntoPlaceOnEntry) withObject:nil afterDelay:1.8];
 }
 

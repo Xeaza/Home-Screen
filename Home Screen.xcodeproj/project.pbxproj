@@ -17,6 +17,7 @@
 		342BC9041A38B0BB0080B567 /* Home_ScreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC9031A38B0BB0080B567 /* Home_ScreenTests.m */; };
 		342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */; };
 		3438678E1A5F5A770055460C /* PaginatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3438678D1A5F5A770055460C /* PaginatedViewController.m */; };
+		343E54541A681CD800824DFB /* ScoreBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 343E54531A681CD800824DFB /* ScoreBackgroundView.m */; };
 		34474EFC1A42162100ED89AB /* ChatBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 34474EFB1A42162100ED89AB /* ChatBubble.m */; };
 		344B07411A449F57006C4B9F /* ee.gif in Resources */ = {isa = PBXBuildFile; fileRef = 344B07401A449F57006C4B9F /* ee.gif */; };
 		344B07431A44AD7E006C4B9F /* doubleTap.gif in Resources */ = {isa = PBXBuildFile; fileRef = 344B07421A44AD7E006C4B9F /* doubleTap.gif */; };
@@ -53,6 +54,8 @@
 		342BC90E1A390ABA0080B567 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		3438678C1A5F5A770055460C /* PaginatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaginatedViewController.h; sourceTree = "<group>"; };
 		3438678D1A5F5A770055460C /* PaginatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaginatedViewController.m; sourceTree = "<group>"; };
+		343E54521A681CD800824DFB /* ScoreBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreBackgroundView.h; sourceTree = "<group>"; };
+		343E54531A681CD800824DFB /* ScoreBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreBackgroundView.m; sourceTree = "<group>"; };
 		34474EFA1A42162100ED89AB /* ChatBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBubble.h; sourceTree = "<group>"; };
 		34474EFB1A42162100ED89AB /* ChatBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBubble.m; sourceTree = "<group>"; };
 		344B07401A449F57006C4B9F /* ee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ee.gif; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				342BC8EC1A38B0BB0080B567 /* AppDelegate.m */,
 				342BC8EE1A38B0BB0080B567 /* MainViewController.h */,
 				342BC8EF1A38B0BB0080B567 /* MainViewController.m */,
+				343E54521A681CD800824DFB /* ScoreBackgroundView.h */,
+				343E54531A681CD800824DFB /* ScoreBackgroundView.m */,
 				3438678C1A5F5A770055460C /* PaginatedViewController.h */,
 				3438678D1A5F5A770055460C /* PaginatedViewController.m */,
 				34474EFA1A42162100ED89AB /* ChatBubble.h */,
@@ -257,6 +262,7 @@
 				342BC90F1A390ABA0080B567 /* UIImage+animatedGIF.m in Sources */,
 				342BC8ED1A38B0BB0080B567 /* AppDelegate.m in Sources */,
 				34500B7E1A3A25C4006665A9 /* InstructionsViewController.m in Sources */,
+				343E54541A681CD800824DFB /* ScoreBackgroundView.m in Sources */,
 				34474EFC1A42162100ED89AB /* ChatBubble.m in Sources */,
 				342BC8EA1A38B0BB0080B567 /* main.m in Sources */,
 				340F5ACB1A40E5AA00795A0B /* TipsAndTricksViewController.m in Sources */,
