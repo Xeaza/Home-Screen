@@ -14,7 +14,7 @@
 {
     [self drawCircle];
     [self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
-    [self performSelector:@selector(drawLeftPath) withObject:nil afterDelay:0.9];
+    //[self performSelector:@selector(drawLeftPath) withObject:nil afterDelay:0.9];
 }
 
 - (void)drawCircle
@@ -68,7 +68,7 @@
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = path.CGPath;
     shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-    shapeLayer.lineWidth = 3.0;
+    shapeLayer.lineWidth = 2.0;
     shapeLayer.fillColor = [UIColor clearColor].CGColor;
 
     CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
@@ -108,7 +108,7 @@
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = leftPath.CGPath;
     shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-    shapeLayer.lineWidth = 3.0;
+    shapeLayer.lineWidth = 2.0;
     shapeLayer.fillColor = [UIColor clearColor].CGColor;
 
     CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
