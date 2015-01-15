@@ -353,11 +353,17 @@
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="YD3-eU-Vm4" secondAttribute="centerX" id="aTf-do-9Lv"/>
                             <constraint firstItem="yhQ-TK-dox" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="263" id="cWX-F1-Gkh"/>
-                            <constraint firstItem="y28-CE-g5K" firstAttribute="top" secondItem="yhQ-TK-dox" secondAttribute="bottom" id="ciR-2G-nBv"/>
+                            <constraint firstItem="y28-CE-g5K" firstAttribute="top" secondItem="yhQ-TK-dox" secondAttribute="bottom" id="ciR-2G-nBv">
+                                <variation key="widthClass=compact" constant="81"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="STe-8F-qP7" secondAttribute="centerX" id="dyV-ZD-8c9"/>
                             <constraint firstAttribute="centerX" secondItem="LqK-O6-Qyf" secondAttribute="centerX" id="g3q-hC-6ls"/>
-                            <constraint firstItem="OSN-W4-bbe" firstAttribute="top" secondItem="LqK-O6-Qyf" secondAttribute="bottom" constant="38" id="pkg-Ak-zkg"/>
-                            <constraint firstItem="Oui-gc-Q6Z" firstAttribute="top" secondItem="STe-8F-qP7" secondAttribute="bottom" constant="36" id="tIx-wa-c6y"/>
+                            <constraint firstItem="OSN-W4-bbe" firstAttribute="top" secondItem="LqK-O6-Qyf" secondAttribute="bottom" constant="38" id="pkg-Ak-zkg">
+                                <variation key="widthClass=compact" constant="95"/>
+                            </constraint>
+                            <constraint firstItem="Oui-gc-Q6Z" firstAttribute="top" secondItem="STe-8F-qP7" secondAttribute="bottom" constant="36" id="tIx-wa-c6y">
+                                <variation key="widthClass=compact" constant="134"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="551-eV-xJa" secondAttribute="centerX" id="tPE-dc-ajr"/>
                             <constraint firstItem="yhQ-TK-dox" firstAttribute="top" secondItem="LqK-O6-Qyf" secondAttribute="bottom" constant="44" id="zRI-xp-ZHb"/>
                         </constraints>
@@ -373,23 +379,23 @@
                                 <exclude reference="Oui-gc-Q6Z"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="XaG-9b-VRS"/>
-                                <exclude reference="aTf-do-9Lv"/>
-                                <exclude reference="LFJ-5v-zeA"/>
-                                <exclude reference="g3q-hC-6ls"/>
+                                <exclude reference="HsB-WN-6zq"/>
+                                <exclude reference="tPE-dc-ajr"/>
                                 <exclude reference="KgC-Nz-NZZ"/>
                                 <exclude reference="pkg-Ak-zkg"/>
+                                <exclude reference="Jnw-34-pPp"/>
+                                <exclude reference="dyV-ZD-8c9"/>
+                                <exclude reference="XaG-9b-VRS"/>
+                                <exclude reference="aTf-do-9Lv"/>
+                                <exclude reference="GLN-6p-2mJ"/>
+                                <exclude reference="ciR-2G-nBv"/>
                                 <exclude reference="0S9-jE-Av7"/>
                                 <exclude reference="cWX-F1-Gkh"/>
                                 <exclude reference="zRI-xp-ZHb"/>
-                                <exclude reference="HsB-WN-6zq"/>
-                                <exclude reference="tPE-dc-ajr"/>
-                                <exclude reference="GLN-6p-2mJ"/>
-                                <exclude reference="ciR-2G-nBv"/>
-                                <exclude reference="Jnw-34-pPp"/>
-                                <exclude reference="dyV-ZD-8c9"/>
                                 <exclude reference="Aml-ui-jfr"/>
                                 <exclude reference="tIx-wa-c6y"/>
+                                <exclude reference="LFJ-5v-zeA"/>
+                                <exclude reference="g3q-hC-6ls"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -404,23 +410,23 @@
                                 <include reference="Oui-gc-Q6Z"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="XaG-9b-VRS"/>
-                                <include reference="aTf-do-9Lv"/>
-                                <include reference="LFJ-5v-zeA"/>
-                                <include reference="g3q-hC-6ls"/>
+                                <include reference="HsB-WN-6zq"/>
+                                <include reference="tPE-dc-ajr"/>
                                 <include reference="KgC-Nz-NZZ"/>
                                 <include reference="pkg-Ak-zkg"/>
+                                <include reference="Jnw-34-pPp"/>
+                                <include reference="dyV-ZD-8c9"/>
+                                <include reference="XaG-9b-VRS"/>
+                                <include reference="aTf-do-9Lv"/>
+                                <include reference="GLN-6p-2mJ"/>
+                                <include reference="ciR-2G-nBv"/>
                                 <include reference="0S9-jE-Av7"/>
                                 <include reference="cWX-F1-Gkh"/>
                                 <exclude reference="zRI-xp-ZHb"/>
-                                <include reference="HsB-WN-6zq"/>
-                                <include reference="tPE-dc-ajr"/>
-                                <include reference="GLN-6p-2mJ"/>
-                                <include reference="ciR-2G-nBv"/>
-                                <include reference="Jnw-34-pPp"/>
-                                <include reference="dyV-ZD-8c9"/>
                                 <include reference="Aml-ui-jfr"/>
                                 <include reference="tIx-wa-c6y"/>
+                                <include reference="LFJ-5v-zeA"/>
+                                <include reference="g3q-hC-6ls"/>
                             </mask>
                         </variation>
                         <connections>
