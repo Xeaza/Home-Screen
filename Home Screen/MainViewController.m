@@ -27,9 +27,7 @@
 @property NSInteger pages;
 
 @property (strong, nonatomic) CABasicAnimation *rotateAnimation;
-@property (weak, nonatomic) IBOutlet UILabel *typingWordsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sendingEmojiLabel;
-@property (weak, nonatomic) IBOutlet UIButton *inviteFriendsButton;
+
 
 @end
 
@@ -42,9 +40,6 @@
     self.firstPointInfo.alpha = 0.0;
     self.secondPointInfo.alpha = 0.0;
     self.thirdPointInfo.alpha = 0.0;
-    self.typingWordsLabel.alpha = 0.0;
-    self.sendingEmojiLabel.alpha = 0.0;
-    self.inviteFriendsButton.alpha = 0.0;
 
     self.score = [NSNumber numberWithInt:211];
 
@@ -53,15 +48,11 @@
 
     self.tipsArray = @[@"Did you know you can double tap on an emoji to replace the word your just typed?", @"Did you know that typing 'ee' loads all available emoji starting with your most recently used?"];
 
-    self.typingWordsLabel.text = @"The more you type with Roxy the more points you earn.";
-
     //[NSTimer scheduledTimerWithTimeInterval:arc4random_uniform(60) + 30 target:self selector:@selector(showTip) userInfo:nil repeats:YES];
 
     ScoreBackgroundView *scoreBackgroundView = [[ScoreBackgroundView alloc] initWithFrame:self.view.frame];
     scoreBackgroundView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:scoreBackgroundView];
-
-    [self performSelector:@selector(fadeInlabels) withObject:nil afterDelay:1.0];
 }
 
 #pragma mark - Score Label
@@ -118,26 +109,6 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     NSLog(@"Done");
-}
-
-#pragma mark - Earn Points Info
-
-- (void)fadeInlabels
-{
-    [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.typingWordsLabel.alpha = 1.0;
-        [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-            self.sendingEmojiLabel.alpha = 1.0;
-            [UIView animateWithDuration:0.3 delay:0.9 options:UIViewAnimationOptionCurveLinear animations:^{
-                self.inviteFriendsButton.alpha = 1.0;
-            } completion:nil];
-        } completion:nil];
-    } completion:nil];
-}
-
-- (IBAction)onInviteFriendsButtonPressed:(id)sender
-{
-
 }
 
 #pragma mark - Info Button
