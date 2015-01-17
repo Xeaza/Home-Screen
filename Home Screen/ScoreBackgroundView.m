@@ -14,7 +14,7 @@
 {
     [self drawCircle];
     [self performSelector:@selector(drawALine) withObject:nil afterDelay:0.9];
-    //[self performSelector:@selector(drawLeftPath) withObject:nil afterDelay:0.9];
+    [self performSelector:@selector(drawLeftPath) withObject:nil afterDelay:0.9];
 }
 
 - (void)drawCircle
@@ -45,7 +45,7 @@
 - (void)drawALine
 {
     CGFloat xPosition = self.center.x;
-    CGFloat startingPosition = 120;
+    CGFloat startingPosition = self.layer.frame.size.height * .13;
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(xPosition, self.layer.frame.size.width * .55 + 40)];
     // Top box
@@ -54,16 +54,16 @@
     [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition + 50)];
     [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 50)];
     // Middle box
-    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 100)];
-    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition + 100)];
-    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition + 150)];
-    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 150)];
+    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 50)];
+    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition * 1.35 + 50)];
+    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition * 1.35 + 100)];
+    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 100)];
     // Bottom box
-    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 200)];
-    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition + 200)];
-    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition + 250)];
-    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 250)];
-    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 300)];
+    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 130)];
+    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition * 1.35 + 130)];
+    [path addLineToPoint:CGPointMake(xPosition + 100, xPosition + startingPosition * 1.35 + 180)];
+    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 180)];
+    [path addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 3.0 + 250)];
 
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = path.CGPath;
@@ -85,7 +85,7 @@
 - (void)drawLeftPath
 {
     CGFloat xPosition = self.center.x;
-    CGFloat startingPosition = 120;
+    CGFloat startingPosition = self.layer.frame.size.height * .13;
     UIBezierPath *leftPath = [UIBezierPath bezierPath];
     [leftPath moveToPoint:CGPointMake(xPosition, xPosition + startingPosition)];
     // Top box
@@ -94,21 +94,21 @@
     [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition + 50)];
     [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 50)];
     // Middle box
-    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 100)];
-    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition + 100)];
-    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition + 150)];
-    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 150)];
+    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 50)];
+    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition * 1.35 + 50)];
+    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition * 1.35 + 100)];
+    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 100)];
     // Bottom box
-    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 200)];
-    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition + 200)];
-    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition + 250)];
-    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 250)];
-    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition + 300)];
+    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 130)];
+    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition * 1.35 + 130)];
+    [leftPath addLineToPoint:CGPointMake(xPosition - 100, xPosition + startingPosition * 1.35 + 180)];
+    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 1.35 + 180)];
+    [leftPath addLineToPoint:CGPointMake(xPosition, xPosition + startingPosition * 3.0 + 250)];
 
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = leftPath.CGPath;
     shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-    shapeLayer.lineWidth = 2.0;
+    shapeLayer.lineWidth = 2.0; 
     shapeLayer.fillColor = [UIColor clearColor].CGColor;
 
     CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
