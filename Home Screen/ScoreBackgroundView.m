@@ -10,6 +10,18 @@
 
 @implementation ScoreBackgroundView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addMoreYouTypeLabel];
+        [self addUseEmojiLabel];
+        [self addInviteFriendsButton];
+    }
+    return self;
+}
+
+
 - (void)drawRect:(CGRect)rect
 {
     [self drawCircle];
@@ -121,5 +133,58 @@
     [self.layer addSublayer:shapeLayer];
     [shapeLayer addAnimation:drawAnimation forKey:@"animateStroke"];
 }
+
+
+- (void)addMoreYouTypeLabel
+{
+    UILabel *typeMoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 95, self.center.x + self.layer.frame.size.height * .13, 190, 50)];
+    [self defaultLabelSettings:typeMoreLabel];
+    typeMoreLabel.text = @"The more you type with Roxie the more points you earn";
+    [self addSubview:typeMoreLabel];
+}
+
+- (void)addUseEmojiLabel
+{
+    CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
+    UILabel *moreEmojiLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 95, startingPosition + 50, 190, 50)];
+    [self defaultLabelSettings:moreEmojiLabel];
+    moreEmojiLabel.text = @"Express yourself with more emoji to earn points";
+    [self addSubview:moreEmojiLabel];
+}
+
+- (void)addInviteFriendsButton
+{
+    CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
+    UIButton *inviteFriendsButton = [[UIButton alloc] initWithFrame:CGRectMake(self.center.x - 95, startingPosition + 130, 190, 50)];
+    //[self defaultLabelSettings:inviteFriendsButton];
+    inviteFriendsButton.titleLabel.text = @"Invite Friends";
+    inviteFriendsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    inviteFriendsButton.titleLabel.textColor = [UIColor whiteColor];
+    [self addSubview:inviteFriendsButton];
+
+    UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:customButton];
+
+    [customButton setTitle:@"Invite Friends" forState:UIControlStateNormal];
+    customButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
+    [customButton setContentEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 4)];
+    [customButton sizeToFit];
+    //customButton.center = CGPointMake(self.center.x, startingPosition + 130);
+    customButton.frame = CGRectMake(self.center.x - 95, startingPosition + 130, 190, 50);
+
+    [customButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+}
+
+- (void)defaultLabelSettings:(UILabel *)label
+{
+    label.textAlignment = NSTextAlignmentCenter;
+    label.adjustsFontSizeToFitWidth = YES;
+    label.minimumScaleFactor = 0.5;
+    label.numberOfLines = 0;
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
+    label.textColor = [UIColor whiteColor];
+}
+
 
 @end
