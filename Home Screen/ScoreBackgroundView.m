@@ -155,24 +155,19 @@
 - (void)addInviteFriendsButton
 {
     CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
-    UIButton *inviteFriendsButton = [[UIButton alloc] initWithFrame:CGRectMake(self.center.x - 95, startingPosition + 130, 190, 50)];
-    //[self defaultLabelSettings:inviteFriendsButton];
-    inviteFriendsButton.titleLabel.text = @"Invite Friends";
-    inviteFriendsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    inviteFriendsButton.titleLabel.textColor = [UIColor whiteColor];
+    UIButton *inviteFriendsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:inviteFriendsButton];
 
-    UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:customButton];
+    [inviteFriendsButton setTitle:@"Invite Friends" forState:UIControlStateNormal];
+    inviteFriendsButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
+    [inviteFriendsButton setContentEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 4)];
+    [inviteFriendsButton sizeToFit];
+    inviteFriendsButton.frame = CGRectMake(self.center.x - 100, startingPosition + 130, 200, 50);
 
-    [customButton setTitle:@"Invite Friends" forState:UIControlStateNormal];
-    customButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
-    [customButton setContentEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 4)];
-    [customButton sizeToFit];
-    //customButton.center = CGPointMake(self.center.x, startingPosition + 130);
-    customButton.frame = CGRectMake(self.center.x - 95, startingPosition + 130, 190, 50);
+    [inviteFriendsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    inviteFriendsButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    inviteFriendsButton.alpha = 0.0;
 
-    [customButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
 }
 
