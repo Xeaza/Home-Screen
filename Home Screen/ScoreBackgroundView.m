@@ -14,9 +14,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addMoreYouTypeLabel];
-        [self addUseEmojiLabel];
-        [self addInviteFriendsButton];
+        [self addMoreYouTypeLabelWithDelay:1.2];
+        [self addUseEmojiLabelWithDelay:1.5];
+        [self addInviteFriendsButtonWithDelay:1.8];
     }
     return self;
 }
@@ -135,24 +135,34 @@
 }
 
 
-- (void)addMoreYouTypeLabel
+- (void)addMoreYouTypeLabelWithDelay:(float)delay
 {
     UILabel *typeMoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 95, self.center.x + self.layer.frame.size.height * .13, 190, 50)];
     [self defaultLabelSettings:typeMoreLabel];
     typeMoreLabel.text = @"The more you type with Roxie the more points you earn";
     [self addSubview:typeMoreLabel];
+    typeMoreLabel.alpha = 0.0;
+
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+        typeMoreLabel.alpha = 1.0;
+    } completion:nil];
 }
 
-- (void)addUseEmojiLabel
+- (void)addUseEmojiLabelWithDelay:(float)delay
 {
     CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
     UILabel *moreEmojiLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 95, startingPosition + 50, 190, 50)];
     [self defaultLabelSettings:moreEmojiLabel];
     moreEmojiLabel.text = @"Express yourself with more emoji to earn points";
     [self addSubview:moreEmojiLabel];
+    moreEmojiLabel.alpha = 0.0;
+
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+        moreEmojiLabel.alpha = 1.0;
+    } completion:nil];
 }
 
-- (void)addInviteFriendsButton
+- (void)addInviteFriendsButtonWithDelay:(float)delay
 {
     CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
     UIButton *inviteFriendsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -168,6 +178,9 @@
     inviteFriendsButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
     inviteFriendsButton.alpha = 0.0;
 
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+        inviteFriendsButton.alpha = 1.0;
+    } completion:nil];
 
 }
 
