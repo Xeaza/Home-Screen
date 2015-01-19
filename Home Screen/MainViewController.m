@@ -11,7 +11,7 @@
 #import "TipsAndTricksViewController.h"
 #import "ScoreBackgroundView.h"
 
-@interface MainViewController ()
+@interface MainViewController () <ScoreBackgroundViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emojiLabel;
@@ -27,7 +27,6 @@
 @property NSInteger pages;
 
 @property (strong, nonatomic) CABasicAnimation *rotateAnimation;
-
 
 @end
 
@@ -52,6 +51,7 @@
 
     ScoreBackgroundView *scoreBackgroundView = [[ScoreBackgroundView alloc] initWithFrame:self.view.frame];
     scoreBackgroundView.backgroundColor = [UIColor clearColor];
+    scoreBackgroundView.delegate = self;
     [self.view addSubview:scoreBackgroundView];
 }
 
@@ -109,6 +109,13 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     NSLog(@"Done");
+}
+
+#pragma mark - Invite Friends
+
+- (void)inviteFriendsButtonPressed
+{
+    NSLog(@"Invite Friends Button pressed");
 }
 
 #pragma mark - Info Button
