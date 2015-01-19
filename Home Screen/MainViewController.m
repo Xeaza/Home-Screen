@@ -73,6 +73,13 @@
 - (void)inviteFriendsButtonPressed
 {
     NSLog(@"Invite Friends Button pressed");
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"url to share roxie"]
+                                                                                         applicationActivities:nil];
+    [self.navigationController presentViewController:activityViewController
+                                            animated:YES
+                                          completion:^{
+                                              NSLog(@"Share Pressed");
+                                          }];
 }
 
 #pragma mark - Info Button
