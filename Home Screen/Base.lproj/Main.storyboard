@@ -324,41 +324,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to view next tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adv-wh-kmB">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="XTV-oP-duq"/>
-                                    <constraint firstAttribute="height" constant="21" id="jhl-r0-eBK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XTV-oP-duq"/>
-                                        <exclude reference="jhl-r0-eBK"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="XTV-oP-duq"/>
-                                        <include reference="jhl-r0-eBK"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OBn-88-8W2" firstAttribute="top" secondItem="HXz-Ca-04h" secondAttribute="bottom" constant="24" id="5gx-HS-hzF"/>
-                            <constraint firstAttribute="centerX" secondItem="adv-wh-kmB" secondAttribute="centerX" id="BWS-CL-OgW"/>
                             <constraint firstItem="y10-i4-w6d" firstAttribute="top" secondItem="OBn-88-8W2" secondAttribute="bottom" constant="34.5" id="Elh-en-Y54"/>
                             <constraint firstAttribute="centerX" secondItem="OBn-88-8W2" secondAttribute="centerX" id="F7C-93-9bg"/>
                             <constraint firstAttribute="trailing" secondItem="y10-i4-w6d" secondAttribute="trailing" constant="1" id="KiF-er-XKr">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="3Yf-Lt-gRr" firstAttribute="top" secondItem="y10-i4-w6d" secondAttribute="bottom" id="M53-P7-eoC"/>
-                            <constraint firstItem="y10-i4-w6d" firstAttribute="top" secondItem="adv-wh-kmB" secondAttribute="bottom" constant="8" id="UUG-XV-OJS"/>
                             <constraint firstItem="HXz-Ca-04h" firstAttribute="top" secondItem="eWf-eo-IZr" secondAttribute="bottom" constant="57" id="bGm-99-rji"/>
                             <constraint firstItem="y10-i4-w6d" firstAttribute="leading" secondItem="jfP-68-T8N" secondAttribute="leading" id="jrE-LM-6vw"/>
                             <constraint firstAttribute="centerX" secondItem="HXz-Ca-04h" secondAttribute="centerX" id="yPp-3f-GN5"/>
@@ -368,7 +344,6 @@
                                 <exclude reference="HXz-Ca-04h"/>
                                 <exclude reference="OBn-88-8W2"/>
                                 <exclude reference="y10-i4-w6d"/>
-                                <exclude reference="adv-wh-kmB"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="M53-P7-eoC"/>
@@ -376,10 +351,8 @@
                                 <exclude reference="yPp-3f-GN5"/>
                                 <exclude reference="5gx-HS-hzF"/>
                                 <exclude reference="F7C-93-9bg"/>
-                                <exclude reference="BWS-CL-OgW"/>
                                 <exclude reference="Elh-en-Y54"/>
                                 <exclude reference="KiF-er-XKr"/>
-                                <exclude reference="UUG-XV-OJS"/>
                                 <exclude reference="jrE-LM-6vw"/>
                             </mask>
                         </variation>
@@ -388,7 +361,6 @@
                                 <include reference="HXz-Ca-04h"/>
                                 <include reference="OBn-88-8W2"/>
                                 <include reference="y10-i4-w6d"/>
-                                <include reference="adv-wh-kmB"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="M53-P7-eoC"/>
@@ -396,38 +368,28 @@
                                 <include reference="yPp-3f-GN5"/>
                                 <include reference="5gx-HS-hzF"/>
                                 <include reference="F7C-93-9bg"/>
-                                <include reference="BWS-CL-OgW"/>
                                 <include reference="Elh-en-Y54"/>
                                 <include reference="KiF-er-XKr"/>
-                                <include reference="UUG-XV-OJS"/>
                                 <include reference="jrE-LM-6vw"/>
                             </mask>
                         </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="555-Q7-GiF" appends="YES" id="dwZ-u7-H0y"/>
-                            <outletCollection property="gestureRecognizers" destination="2qW-ZJ-Cr1" appends="YES" id="tPe-2k-Mde"/>
+                            <outletCollection property="gestureRecognizers" destination="Aef-wA-4dD" appends="YES" id="PTc-iA-g0n"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tipsTricksIcon" id="Ii2-Jr-aUo"/>
                     <connections>
                         <outlet property="gifImageView" destination="y10-i4-w6d" id="Sdl-93-pHh"/>
                         <outlet property="instructionLabel" destination="OBn-88-8W2" id="Bck-4H-TJX"/>
-                        <outlet property="swipeInstructionLabel" destination="adv-wh-kmB" id="qdG-Ga-MkO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3A-S2-2XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="555-Q7-GiF" userLabel="Right Swipe Gesture Recognizer">
+                <tapGestureRecognizer id="Aef-wA-4dD">
                     <connections>
-                        <action selector="onRightSwipe:" destination="Grh-ng-XzC" id="WaF-WP-Djk"/>
-                        <outlet property="delegate" destination="Grh-ng-XzC" id="Xa9-I4-2js"/>
+                        <action selector="onTapGesture:" destination="Grh-ng-XzC" id="Fho-N9-cDx"/>
+                        <outlet property="delegate" destination="Grh-ng-XzC" id="gJX-CC-pfI"/>
                     </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="2qW-ZJ-Cr1" userLabel="Left Swipe Gesture Recognizer">
-                    <connections>
-                        <action selector="onLeftSwipe:" destination="Grh-ng-XzC" id="Vys-Wd-A4h"/>
-                        <outlet property="delegate" destination="Grh-ng-XzC" id="ddB-zI-JYu"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="135" y="1085"/>
         </scene>

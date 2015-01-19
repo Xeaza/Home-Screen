@@ -34,25 +34,8 @@
     self.gifImageView.image = [UIImage animatedImageWithAnimatedGIFURL:self.tipsDictionary[@"ee"][0]];
 
     self.instructionLabel.text = self.tipsDictionary[@"ee"][1];
-
-    self.swipeInstructionLabel.alpha = 0.0;
-    [UIView animateWithDuration:0.3 delay:2.0 options:UIViewAnimationOptionTransitionNone animations:^{
-        self.swipeInstructionLabel.alpha = 1.0;
-    } completion:^(BOOL finished) {
-        // TODO: Save that user has seen this already in user defaults
-
-        [UIView animateWithDuration:0.3 delay:2.0 options:UIViewAnimationOptionTransitionNone animations:^{
-            self.swipeInstructionLabel.alpha = 0.0;
-        } completion:nil];
-    }];
 }
 
-- (IBAction)onRightSwipe:(UISwipeGestureRecognizer *)rightSwipeGesture
-{
-    [self showNextTip];
-}
-
-- (IBAction)onLeftSwipe:(UISwipeGestureRecognizer *)leftSwipeGesture
 {
     [self showNextTip];
 }
