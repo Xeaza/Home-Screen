@@ -72,14 +72,21 @@
 
 - (void)inviteFriendsButtonPressed
 {
-    NSLog(@"Invite Friends Button pressed");
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"url to share roxie"]
+    NSURL *url = [[NSURL alloc] initWithString:@"http://www.testurl.com/"];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"testing", url]
                                                                                          applicationActivities:nil];
-    [self.navigationController presentViewController:activityViewController
+    [self presentViewController:activityViewController
                                             animated:YES
                                           completion:^{
-                                              NSLog(@"Share Pressed");
+                                              NSLog(@"Invite Friends Pressed");
                                           }];
+    if ([activityViewController respondsToSelector:@selector(popoverPresentationController)])
+    {
+        // iOS 8+
+        UIPopoverPresentationController *presentationController = [activityViewController popoverPresentationController];
+
+        presentationController.sourceView = self.view;
+    }
 }
 
 #pragma mark - Info Button
