@@ -176,7 +176,11 @@
     inviteFriendsButton.frame = CGRectMake(self.center.x - 100, startingPosition + 130, 200, 50);
 
     [inviteFriendsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    inviteFriendsButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    //inviteFriendsButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1.0 alpha:0.2]] forState:UIControlStateNormal];
+    [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor clearColor]] forState:UIControlStateHighlighted];
+
+
     inviteFriendsButton.alpha = 0.0;
 
     [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
@@ -193,6 +197,20 @@
     label.numberOfLines = 0;
     label.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
     label.textColor = [UIColor whiteColor];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return image;
 }
 
 - (void)inViteFriendsbuttonPressed:(id)sender
