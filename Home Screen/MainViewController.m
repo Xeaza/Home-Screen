@@ -19,14 +19,9 @@
 @property NSInteger counter;
 
 @property (weak, nonatomic) IBOutlet UIView *scoreContainerView;
-@property (weak, nonatomic) IBOutlet UILabel *firstPointInfo;
-@property (weak, nonatomic) IBOutlet UILabel *secondPointInfo;
-@property (weak, nonatomic) IBOutlet UILabel *thirdPointInfo;
 
 @property (strong, nonatomic) NSArray *tipsArray;
 @property NSInteger pages;
-
-@property (strong, nonatomic) CABasicAnimation *rotateAnimation;
 
 @end
 
@@ -35,10 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.firstPointInfo.alpha = 0.0;
-    self.secondPointInfo.alpha = 0.0;
-    self.thirdPointInfo.alpha = 0.0;
 
     self.score = [NSNumber numberWithInt:211];
 
@@ -67,32 +58,6 @@
     }
 }
 
-- (IBAction)onScoreLabelTapped:(UITapGestureRecognizer *)tapGesture
-{
-    CGPoint point = [tapGesture locationInView:self.scoreContainerView];
-
-    if (self.firstPointInfo.alpha == 1.0) {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.firstPointInfo.alpha = 0.0;
-            self.secondPointInfo.alpha = 0.0;
-            self.thirdPointInfo.alpha = 0.0;
-        }];
-    }
-    else if (CGRectContainsPoint(self.scoreLabel.frame, point)) {
-        [UIView animateWithDuration:0.2 animations:^{
-            self.firstPointInfo.alpha = 1.0;
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.2 animations:^{
-                self.secondPointInfo.alpha = 1.0;
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:0.2 animations:^{
-                    self.thirdPointInfo.alpha = 1.0;
-                }];
-            }];
-        }];
-    }
-}
-
 #pragma mark - Tips & Tricks
 
 //- (void)showTip
@@ -102,14 +67,6 @@
 //    [self.view addSubview:chatBubble];
 //    [chatBubble showChatBubble];
 //}
-
-
-#pragma mark - CAAnimation Delegate
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
-{
-    NSLog(@"Done");
-}
 
 #pragma mark - Invite Friends
 

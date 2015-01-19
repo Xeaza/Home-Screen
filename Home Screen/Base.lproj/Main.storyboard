@@ -88,72 +88,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn Roxy Points by:  Typing Words" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-TK-dox">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="UwK-HU-ebd"/>
-                                    <constraint firstAttribute="width" constant="155" id="oE3-XS-HvB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UwK-HU-ebd"/>
-                                        <exclude reference="oE3-XS-HvB"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="UwK-HU-ebd"/>
-                                        <include reference="oE3-XS-HvB"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-eV-xJa">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="AxV-qR-Ifa"/>
-                                    <constraint firstAttribute="width" constant="159" id="JHN-Zx-ud6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AxV-qR-Ifa"/>
-                                        <exclude reference="JHN-Zx-ud6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="AxV-qR-Ifa"/>
-                                        <include reference="JHN-Zx-ud6"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inviting Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STe-8F-qP7">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="DsO-fk-U4o"/>
-                                    <constraint firstAttribute="height" constant="21" id="OxH-57-kKd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DsO-fk-U4o"/>
-                                        <exclude reference="OxH-57-kKd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="DsO-fk-U4o"/>
-                                        <include reference="OxH-57-kKd"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2111" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="YD3-eU-Vm4">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <gestureRecognizers/>
@@ -268,9 +202,6 @@
                         <color key="backgroundColor" red="0.7725490196" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="yhQ-TK-dox" secondAttribute="centerX" id="0S9-jE-Av7"/>
-                            <constraint firstItem="551-eV-xJa" firstAttribute="top" secondItem="yhQ-TK-dox" secondAttribute="bottom" constant="2" id="HsB-WN-6zq"/>
-                            <constraint firstItem="STe-8F-qP7" firstAttribute="top" secondItem="551-eV-xJa" secondAttribute="bottom" constant="3" id="Jnw-34-pPp"/>
                             <constraint firstItem="LqK-O6-Qyf" firstAttribute="top" secondItem="YD3-eU-Vm4" secondAttribute="bottom" constant="-3" id="LFJ-5v-zeA">
                                 <variation key="widthClass=compact" constant="-6"/>
                             </constraint>
@@ -278,76 +209,40 @@
                                 <variation key="widthClass=compact" constant="62"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="YD3-eU-Vm4" secondAttribute="centerX" id="aTf-do-9Lv"/>
-                            <constraint firstItem="yhQ-TK-dox" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="263" id="cWX-F1-Gkh"/>
-                            <constraint firstAttribute="centerX" secondItem="STe-8F-qP7" secondAttribute="centerX" id="dyV-ZD-8c9"/>
                             <constraint firstAttribute="centerX" secondItem="LqK-O6-Qyf" secondAttribute="centerX" id="g3q-hC-6ls"/>
-                            <constraint firstAttribute="centerX" secondItem="551-eV-xJa" secondAttribute="centerX" id="tPE-dc-ajr"/>
-                            <constraint firstItem="yhQ-TK-dox" firstAttribute="top" secondItem="LqK-O6-Qyf" secondAttribute="bottom" constant="44" id="zRI-xp-ZHb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="yhQ-TK-dox"/>
-                                <exclude reference="551-eV-xJa"/>
-                                <exclude reference="STe-8F-qP7"/>
                                 <exclude reference="YD3-eU-Vm4"/>
                                 <exclude reference="LqK-O6-Qyf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HsB-WN-6zq"/>
-                                <exclude reference="tPE-dc-ajr"/>
-                                <exclude reference="Jnw-34-pPp"/>
-                                <exclude reference="dyV-ZD-8c9"/>
                                 <exclude reference="XaG-9b-VRS"/>
                                 <exclude reference="aTf-do-9Lv"/>
-                                <exclude reference="0S9-jE-Av7"/>
-                                <exclude reference="cWX-F1-Gkh"/>
-                                <exclude reference="zRI-xp-ZHb"/>
                                 <exclude reference="LFJ-5v-zeA"/>
                                 <exclude reference="g3q-hC-6ls"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="yhQ-TK-dox"/>
-                                <include reference="551-eV-xJa"/>
-                                <include reference="STe-8F-qP7"/>
                                 <include reference="YD3-eU-Vm4"/>
                                 <include reference="LqK-O6-Qyf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HsB-WN-6zq"/>
-                                <include reference="tPE-dc-ajr"/>
-                                <include reference="Jnw-34-pPp"/>
-                                <include reference="dyV-ZD-8c9"/>
                                 <include reference="XaG-9b-VRS"/>
                                 <include reference="aTf-do-9Lv"/>
-                                <include reference="0S9-jE-Av7"/>
-                                <include reference="cWX-F1-Gkh"/>
-                                <exclude reference="zRI-xp-ZHb"/>
                                 <include reference="LFJ-5v-zeA"/>
                                 <include reference="g3q-hC-6ls"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="y3s-dP-jSW" appends="YES" id="Enb-q0-N1g"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="scoreIcon" id="8LV-Tz-qnG"/>
                     <connections>
                         <outlet property="emojiLabel" destination="sx7-aq-fuK" id="gb9-9Y-Qch"/>
-                        <outlet property="firstPointInfo" destination="yhQ-TK-dox" id="QBv-Jo-RNt"/>
                         <outlet property="scoreLabel" destination="YD3-eU-Vm4" id="jZ2-Lp-Lwr"/>
-                        <outlet property="secondPointInfo" destination="551-eV-xJa" id="hh4-gO-quM"/>
-                        <outlet property="thirdPointInfo" destination="STe-8F-qP7" id="Y76-7S-YXX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="y3s-dP-jSW">
-                    <connections>
-                        <action selector="onScoreLabelTapped:" destination="BYZ-38-t0r" id="5u6-vU-EZl"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="hLo-3c-jkS"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="135" y="428"/>
         </scene>
