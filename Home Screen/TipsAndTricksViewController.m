@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"ee" withExtension:@"gif"];
     NSURL *doubleTapUrl = [[NSBundle mainBundle] URLForResource:@"doubleTap" withExtension:@"gif"];
 

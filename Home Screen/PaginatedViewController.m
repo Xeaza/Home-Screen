@@ -50,7 +50,6 @@
     else {
         return nil;
     }
-
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
@@ -61,7 +60,6 @@
     else {
         return nil;
     }
-
 }
 
 - (UIViewController *)viewControllerAtIndex:(NSInteger)index
@@ -85,7 +83,6 @@
 {
     return 0;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
