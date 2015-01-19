@@ -21,7 +21,6 @@
     return self;
 }
 
-
 - (void)drawRect:(CGRect)rect
 {
     [self drawCircle];
@@ -134,7 +133,6 @@
     [shapeLayer addAnimation:drawAnimation forKey:@"animateStroke"];
 }
 
-
 - (void)addMoreYouTypeLabelWithDelay:(float)delay
 {
     UILabel *typeMoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 95, self.center.x + self.layer.frame.size.height * .13, 190, 50)];
@@ -179,7 +177,6 @@
     [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1.0 alpha:0.2]] forState:UIControlStateNormal];
     [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor clearColor]] forState:UIControlStateHighlighted];
 
-
     inviteFriendsButton.alpha = 0.0;
 
     [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
@@ -213,7 +210,7 @@
 
 - (void)inViteFriendsbuttonPressed:(id)sender
 {
-    NSLog(@"Invite Friends Button pressed");
+    [self.delegate inviteFriendsButtonPressed];
 }
 
 

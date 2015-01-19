@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ScoreBackgroundViewDelegate <NSObject>
+
+- (void)inviteFriendsButtonPressed;
+
+@end
+
 @interface ScoreBackgroundView : UIView
+
+@property id<ScoreBackgroundViewDelegate>delegate;
 
 @end
