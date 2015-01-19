@@ -176,7 +176,6 @@
     inviteFriendsButton.frame = CGRectMake(self.center.x - 100, startingPosition + 130, 200, 50);
 
     [inviteFriendsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //inviteFriendsButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
     [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1.0 alpha:0.2]] forState:UIControlStateNormal];
     [inviteFriendsButton setBackgroundImage:[self imageWithColor:[UIColor clearColor]] forState:UIControlStateHighlighted];
 
@@ -186,7 +185,6 @@
     [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
         inviteFriendsButton.alpha = 1.0;
     } completion:nil];
-
 }
 
 - (void)defaultLabelSettings:(UILabel *)label
