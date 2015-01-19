@@ -166,6 +166,7 @@
 {
     CGFloat startingPosition = self.center.x + self.layer.frame.size.height * .13 * 1.35;
     UIButton *inviteFriendsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [inviteFriendsButton addTarget:self action:@selector(inViteFriendsbuttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:inviteFriendsButton];
 
     [inviteFriendsButton setTitle:@"Invite Friends" forState:UIControlStateNormal];
@@ -192,6 +193,11 @@
     label.numberOfLines = 0;
     label.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17.0];
     label.textColor = [UIColor whiteColor];
+}
+
+- (void)inViteFriendsbuttonPressed:(id)sender
+{
+    NSLog(@"Invite Friends Button pressed");
 }
 
 
